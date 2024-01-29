@@ -1,0 +1,79 @@
+.accordion {
+  box-shadow: 0px 13px 23px -13px rgba(0, 0, 0, 0.5);
+  background-color: transparent;
+}
+.accordion:hover {
+  cursor: pointer;
+}
+.title {
+  background-color: #18191b;
+  color: var(--ui-kit-color-primary);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  text-align: left;
+  line-height: 2;
+  font-weight: lighter;
+  position: relative;
+  padding: 10px;
+  z-index: 2000;
+  border-radius: 4px;
+  transition: all 0.2s ease-in;
+  border: 1px solid transparent;
+}
+.titleText {
+  margin-left: 10px;
+}
+.title:hover {
+  background-color: rgba(0, 0, 0, 0.5);
+  border-color: hsla(0, 0%, 100%, 0.5);
+}
+.title:active {
+  background-color: rgba(0, 0, 0, 0.55);
+  border-color: var(--ui-kit-color-primary);
+}
+.content {
+  height: 30px;
+  background-color: transparent;
+  border-radius: 4px;
+  color: white;
+  font-size: 14px;
+  position: relative;
+  z-index: 1000;
+  margin-top: -30px;
+  text-align: left;
+  transition: all 200ms cubic-bezier(0.6, -0.28, 0.735, 0.045);
+  border: none;
+}
+.contentOpen {
+  margin-top: 0px;
+  height: auto;
+  background-color: rgba(0, 0, 0, 0.1);
+  transition: all 250ms cubic-bezier(0.08, 1.09, 0.32, 1.275);
+  border: 1px solid var(--ui-kit-color-primary);
+}
+.contentText {
+  padding: 15px;
+  visibility: hidden;
+  opacity: 0;
+  overflow: auto;
+  transition: all 0.2s ease-in;
+}
+.contentTextOpen {
+  visibility: visible;
+  opacity: 1;
+  transition: all 0.8s ease-in;
+}
+.faAngleDown {
+  font-size: 20px;
+  color: rgba(255, 255, 255, 0.5);
+  transition: all 0.6s cubic-bezier(0.08, 1.09, 0.32, 1.275);
+}
+.faRotate180 {
+  color: rgba(255, 255, 255, 1);
+}
+.arrowWrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  width: 100%;
+}

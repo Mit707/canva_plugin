@@ -1,0 +1,61 @@
+.iconWrapper {
+  background: hsla(0, 0%, 100%, 0.07);
+  border-radius: 4px;
+  cursor: pointer;
+  height: 48px;
+  transition: all 0.2s ease-in-out;
+  width: 48px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.iconWrapper:hover {
+  border-radius: 50px;
+}
+.pauseIconWrapper {
+  position: relative;
+}
+.itemContainer {
+  /* border: 2px solid transparent;
+  border-radius: 4px; */
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  gap: 8px;
+  position: relative;
+}
+/* .itemContainer:hover {
+  background: hsla(0, 0%, 100%, 0.07);
+}
+.selectedItemContainer {
+  border-color: #8b3dff !important;
+} */
+.itemContainer:hover .playIcon {
+  z-index: 1;
+  opacity: 1;
+  visibility: visible;
+}
+.itemContainer:hover .soundIcon {
+  opacity: 0;
+  visibility: hidden;
+}
+.playIcon {
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.2s ease-in-out;
+}
+.soundIcon {
+  position: relative;
+  z-index: 0;
+  transition: all 0.2s ease-in-out;
+}
+/* .audioContainer {
+  background: #343536;
+  border-radius: 8px;
+  border: 2px solid transparent;
+  border-color: hsla(0, 0%, 100%, 0.2);
+} */
